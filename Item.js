@@ -9,6 +9,7 @@ function Item({item, clickItem}) {
     className="list-item"
     onClick={clickItem}
     value={item.name}
+    count={item.amount}
     >
     {item.name}
     </li>
@@ -16,5 +17,19 @@ function Item({item, clickItem}) {
 
 }
 
+function Item2({item}) {
+    return (
+     <li
+     key={item.id}
+     className="list-item"
+     value={item.name}
+     count={item.amount}
+     >
+     {item.name} x {item.amount}
+     </li>
+ );
+ 
+ }
 
-export default Item;
+
+export {Item, Item2}
